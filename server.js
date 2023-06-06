@@ -27,8 +27,8 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => res.sendFild(path.resolve(__dirname, 'client', 'build', 'index.html')));
 }
 
-const PORT = process.env.PORT || 5555;
+const PORT = process.env.PORT || '5555';
 
-// app.listen(PORT, () => console.log(`server started on port ${ PORT }`));
-app.listen(process.env.PORT || 5555, () => { console.log('server listening on port %d in %s mode', this.address().port, app.settings.env); });
+app.listen(PORT, () => console.log(`server started on port ${ PORT }`));
+// app.listen(process.env.PORT || 5555, () => { console.log('server listening on port %d in %s mode', this.address().port, app.settings.env); });
 
